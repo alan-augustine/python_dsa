@@ -1,0 +1,83 @@
+Chapter-1
+=============
+page.4
+temparature = 98.6
+'temparature' is an identifier/name and 98.6 is an object (yes - 98.6 is an object - id(98.6) will show an address)
+The semantics of a Python identifier is most similar to a reference variable in Java or a pointer variable in C++.
+Each identifier is implicitly associated with the memory address of the object to which it refers
+The methods/method calls and the references are stored in stack memory and all the values objects are stored in a private heap
+ps: name 'heap' has nothing to do with heap data structure
+Ref: https://www.geeksforgeeks.org/how-are-variables-stored-in-python-stack-or-heap/
+
+p.5
+Python is a dynamically typed language:
+- as there is no advance declaration associating an identifier with a particular data type.
+- Also, we can re-assign the identifier to an object of a same/different type
+- Although identifier does not have a type, the object it refers to, have a type
+
+p.6
+temperature = 98.6 results in the creation of a new instance of the float class (literal form of instantiating a class)
+
+methods chaging state of object     - mutators
+methods NOT chaging state of object - accessors
+
+p.7 - mutable and immutable, boolean
+A class is immutable if each object of that class has a fixed value upon instantiation that cannot subsequently be changed.
+ps: but identifier referencing that object can be reassigned to a different value.
+mutable - list, set & dict (3)
+immutable - int, float, string, tuple, frozentuple & boolean (6)
+
+# immutable:
+>>> original = 1
+>>> copy = original
+>>> id(original) == id(copy)
+True
+>>> # now original & copy are pointing to same 'Int' object with a value of 1
+>>> # modify copy
+    copy = copy + 1
+>>>
+>>> id(original) == id(copy)
+False
+# now original & copy are pointing to different 'Int' objects, showing object referenced by 'original' was not mutated by operation 'copy = copy + 1'
+# A new object with new value got created and 'copy' was re-pointed to this new object
+
+
+# mutable
+demonstrating mutablility seems bit complicated,since the implementation of list is bit complex,  but below is one way:
+>>> l = [22]
+>>> m = l
+>>> id(l) == id(m)
+True
+>>> id(l[0]) == id(m[0])
+True
+>>>
+>>> m[0] = m[0] + 1
+>>> id(l) == id(m)
+True
+>>> id(l[0]) == id(m[0])
+True
+ps: when we changed m, l also got changed
+
+default constructor bool() returns false
+- numbers evaluate to True if non-zero and False if zero (i.e, bool(2) is True)
+- sequence and other container types like string/list - evalue to False if empty and True if non-empty
+
+
+p.8 - int, float
+Int class - represents integer value of arbitrary magnitude (i.e python does not have a short & long data-types)
+a = 0b1011 # binary
+b = 0o52 # octal
+c = 0x7f # hexa-decimal
+
+constructor int() retruns 0 by default
+>>> int()
+0
+>>> int(3.14)
+3
+>>> int('1')
+1
+
+6.022e23 represents the mathematical value 6.022 × 1023
+>>> f = 6.022e23
+>>> f
+6.022e+23

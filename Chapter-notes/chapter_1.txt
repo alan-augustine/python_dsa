@@ -3,13 +3,15 @@ Chapter-1
 page.4
 temparature = 98.6
 'temparature' is an identifier/name and 98.6 is an object (yes - 98.6 is an object - id(98.6) will show an address)
+
+
+p.5
 The semantics of a Python identifier is most similar to a reference variable in Java or a pointer variable in C++.
 Each identifier is implicitly associated with the memory address of the object to which it refers
 The methods/method calls and the references are stored in stack memory and all the values objects are stored in a private heap
 ps: name 'heap' has nothing to do with heap data structure
 Ref: https://www.geeksforgeeks.org/how-are-variables-stored-in-python-stack-or-heap/
 
-p.5
 Python is a dynamically typed language:
 - as there is no advance declaration associating an identifier with a particular data type.
 - Also, we can re-assign the identifier to an object of a same/different type

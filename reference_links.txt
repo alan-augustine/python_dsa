@@ -1,0 +1,5 @@
+Book online resources:
+http://bcs.wiley.com/he-bcs/Books?action=index&itemId=1118290275&bcsId=8029
+
+Python string formatting:
+https://mkaz.blog/code/python-string-format-cookbook/

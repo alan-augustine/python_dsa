@@ -58,11 +58,16 @@ True
 True
 >>> id(l[0]) == id(m[0])
 True
-ps: when we changed m, l also got changed
+ps: when we changed m, l also got changed ,since the operation mutated(changed value) of existing object,
+instead of creating a new object
 
-default constructor bool() returns false
+bool class:
+- default constructor bool() returns false
 - numbers evaluate to True if non-zero and False if zero (i.e, bool(2) is True)
 - sequence and other container types like string/list - evalue to False if empty and True if non-empty
+
+
+
 
 
 p.8 - int, float
@@ -71,7 +76,7 @@ a = 0b1011 # binary
 b = 0o52 # octal
 c = 0x7f # hexa-decimal
 
-constructor int() retruns 0 by default
+constructor int() retruns 0 by defaults
 >>> int()
 0
 >>> int(3.14)
@@ -83,3 +88,59 @@ constructor int() retruns 0 by default
 >>> f = 6.022e23
 >>> f
 6.022e+23
+
+P.9
+Sequence types - order of elements are important - list, tuple, str 
+
+List:
+- mutable (eg: we can add elemnts to a list, do a[2] = 'new_value' etc.)
+- list is a referential structure - it stores sequences of references to its elements 
+- list() constructor will accept any parameter that is of 'iterable' type (string is an iterable type)
+
+P.10
+tuple - immutable 
+str - immutable 
+
+P.11
+set class:
+- elements are unordered (no index)
+- highly optimized way of checking whether an element is present - due to internal use of hash tables 
+- set is mutable (eg: we can add elemnts to a set)
+- but elements should be of immutable types (so, we cannot hav a set with list as its elements)
+
+dict class:
+- constructor an accept a sequence of key value pairs 
+
+P.12
+a is b - is True is a & b have same identity (i.e a & b refers to same object)
+== operator checks for equality of value
+
+P.13
+..
+
+P.14
+for // and % operations, Python will give results such that:
+q*m + r =n
+where , 1=n//m , r=n%m
+when m +ve --> 0 <= r < m 
+when m -ve --> m < r <= 0
+so, 27 // -4 = -7
+and 27 % -4  = -1
+
++ for sequences means concatenation
+[2] * 4 = [2, 2, 2, 2]
+
+
+P.15
+slices --> half open iterval - start index included and stop index excluded 
+All sequnces define comparision operations based on lexiographic order. So:
+'a' < 'b' is True
+[5, 6 ,7] < [5, 7] , because of entries at idex 1 (not index 0)
+Also, refer various set operations in p.15
+
+P.16
+a=[1,2,3]
+a=a+[4,5] # extends original list
+a+= [6,7] # reassigns a to a new list 
+
+

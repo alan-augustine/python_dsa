@@ -116,7 +116,7 @@ a is b - is True is a & b have same identity (i.e a & b refers to same object)
 == operator checks for equality of value
 
 P.13
-..
+NIL
 
 P.14
 for // and % operations, Python will give results such that:
@@ -142,5 +142,151 @@ P.16
 a=[1,2,3]
 a=a+[4,5] # extends original list
 a+= [6,7] # reassigns a to a new list 
+
+P.17
+1 <= x + y <= 10 is same as: ( 1 <= x +y ) and ( x + y <=10) , but value of +y is calculated only once 
+
+P.18,19,20
+NA
+
+P.21
+some advantages of for loop compared to while loop, in case of iterables:
+  - no need to explicitly manage index
+  - we can use for loop to iterate through sets and dicts, which are un-ordered and does not have indexings
+
+P.22
+NIL 
+
+P.23
+function - invoked without he context of a specific class or an instance of that class 
+method - member function that is invoked on a specific object 
+
+P.24
+Without an explicit 'return' statement, functions will return 'None'
+
+-formal parameters - in function signature
+-actual parameters - objects sent by caller, when invokingt the function 
+- study section 1.5.1 in detail 
+
+P.25
+study section 1.5.1 in detail
+
+P.26
+default paramater
+
+P.27
+- check out a nice technique used in range() function
+- keyword paramter 
+
+P.28
+NIL, but study 
+
+P.29
+Bulit in functions
+
+P.30 
+print(a,b,c) --> non-strin argments will be displayed as str(arg)
+i.e print("value =", 5) is valid
+print('a',5,6,sep='AA', end='')
+
+P.31
+user_input = int(input('Enter a value: '))
+
+P.32
+study all file operations
+fp.read() --> read 'remaining' contents of a readable file as a string 
+
+P.33
+Exceptions
+
+P.34
+Exceptions 
+
+P.35
+NIL 
+
+P.36
+try-except takes slighly more time than standard if-else checks
+
+P.37
+Exceptions are objects that can be examined when caught:
+excet IOError as e:
+    print('Unable to open file', e)
+
+P.38
+refer a nice technique mentioned in the book 
+
+P.39
+Iterator/Iterables 
+Python uses lazy evaluation techniques in many places
+
+P.40
+list(iterable_item) produces a list 
+Genartors - simialr to a function, but instead of returing a value, a yields 
+staement is executed to indicate each element of the series.
+Also check genertor creation example.
+
+P.41
+More about lazy evaluation and generators
+
+P.42
+Conditional expressions 
+
+P.43
+Comprehension
+
+P.44
+Automatic packing
+
+P.45
+Simulatenous assignments - all experssions in RHS are evaluated before any assignment 
+
+P.46
+Scopes and Namespaces
+name resolution - process of determining value associated with an identifier 
+picture - did not understand gpa, grades & major variables
+
+P.47
+first class object - instances of a type that can be:
+  - assigned to an identifier
+  - passed as a parameter
+  - returned by a function 
+functions & classes - first class objects
+name of functions are also identifiers 
+
+P.48
+modules & imports
+
+P.49
+NIL
+
+P.50
+NIL 
+
+
+
+
+
+To Study:
+- creating iterable classes
+- generators 
+- keyword arguments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

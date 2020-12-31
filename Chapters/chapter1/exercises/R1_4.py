@@ -3,7 +3,7 @@ def sum_squares_smaller_than_n(n):
     # generator comprehension are more efficient for large
     # data-sets due to their lazy evaluation
     # refer page.43
-    return sum((pow(i,2) for i in range(n)))
+    return sum((pow(i,2) for i in range(n))) # or pow(i,2) = i*i
 
 k = 1
 print("Sum of squares of all positive integers smaller than", k,
